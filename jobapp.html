@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Job Application</title>  
+    <link rel="stylesheet" href="styles/styles.css"> <!-- Link to your CSS stylesheet -->  
+</head>  
+<body>  
+    <header>  
+        <h1>Apply for a position</h1>  
+        <nav>  
+            <ul>  
+                <li><a href="index.html">Home</a></li>  
+                <li><a href="jobs.html">Position Descriptions</a></li>  
+                <li><a href="about.html">About</a></li>  
+                <li><a href="apply.html">Apply</a></li>  
+            </ul>  
+        </nav>  
+    </header>  
+
+<hr>
+
+    <main>  
+        <section>   
+            <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="POST" enctype="multipart/form-data"> <!-- Action needs to handle submissions -->  
+                <label for="job-ref">Job Reference Number:</label>  
+                <select id="job-ref" name="job_ref" required>  
+                    <option value="" disabled selected>Select your job reference</option>  
+                    <option value="001">001-Front-End Developer</option>  
+                    <option value="002">002-Back-End Developer</option>  
+                    <option value="003">003-Full-Stack Developer</option> 
+                    <option value="004">004-Web Designer</option>
+                    <option value="005">005-Data Analyst/option>
+                    <option value="006">006-UX/UI Designer</option>
+                    <option value="007">007-Software Engineer</option>
+                    <option value="008">008-Project Manager</option>
+                    <option value="009">009-Quality Assurance Tester</option>
+                    <option value="010">010-DevOps Engineer</option>   
+                    <!-- Add more options as necessary -->  
+                </select>  
+
+                <br><br>
+
+                <fieldset>  
+                    <legend>Personal information</legend> 
+                    
+                    <label for="first-name">First Name:</label>  
+                    <input type="text" id="first-name" name="first_name" maxlength="20" required placeholder="Luke">  
+    
+                    <label for="last-name">Last Name:</label>  
+                    <input type="text" id="last-name" name="last_name" maxlength="20" required placeholder="Skywalker">  
+    
+                    <br><br>
+
+                    <label for="dob">Date of Birth:</label>  
+                    <input type="date" id="dob" name="dob" required>  
+                </fieldset>  
+
+                <br>
+
+                <fieldset>
+                    <legend>Gender</legend>
+                    <input type="radio" id="male" name="gender" value="male" required>  
+                    <label for="male">Male</label>  
+                    <input type="radio" id="female" name="gender" value="female">  
+                    <label for="female">Female</label>  
+                    <input type="radio" id="other" name="gender" value="other">  
+                    <label for="other">Other</label>  
+                </fieldset>
+
+                <br>
+                
+                <fieldset>
+                    <legend>Address</legend>
+
+                    <label for="address">Street Address:</label>  
+                    <input type="text" id="address" name="address" maxlength="40" required>  
+    
+                    <label for="suburb">Suburb/Town:</label>  
+                    <input type="text" id="suburb" name="suburb" maxlength="40" required>  
+    
+                    <label for="state">State:</label>  
+                    <select id="state" name="state" required>  
+                        <option value="" disabled selected>Select your state</option>  
+                        <option value="VIC">VIC</option>  
+                        <option value="NSW">NSW</option>  
+                        <option value="QLD">QLD</option>  
+                        <option value="NT">NT</option>  
+                        <option value="WA">WA</option>  
+                        <option value="SA">SA</option>  
+                        <option value="TAS">TAS</option>  
+                        <option value="ACT">ACT</option>  
+                    </select>  
+    
+                    <label for="postcode">Postcode:</label>  
+                    <input type="text" id="postcode" name="postcode" pattern="[0-9]{4}"  maxlength="4" required title="Exactly 4 digits.">  
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Contact information</legend>
+
+                    <label for="email">Email Address:</label>  
+                    <input type="email" id="email" name="email" required placeholder="myname@example.com">  
+    
+                    <label for="phone">Phone Number:</label>  
+                    <input type="tel" id="phone" name="phone" pattern="[0-9 ]{8,12}" required title="8 to 12 digits or spaces." placeholder="(000) 000-0000"> 
+                </fieldset>
+ 
+                <br>
+
+                <fieldset>  
+                    <legend>Required Technical Skills:</legend>  
+                    <label for="skill1">HTML/CSS</label>  
+                    <input type="checkbox" id="skill2" name="technical_skills" value="skill2">  
+                    <label for="skill2">JavaScript</label>  
+                    <input type="checkbox" id="skill3" name="technical_skills" value="skill3">  
+                    <label for="skill3">Node.js</label>
+                    <label for="skill1">Python</label>
+                    <input type="checkbox" id="skill1" name="technical_skills" value="skill1">  
+                    <label for="skill1">SQL</label>
+                    <label for="skill1">Version Control (Git)</label>
+                    <label for="skill1">Graphic Design (Adobe XD, Figma)</label>    
+                    <!-- Add more skills as necessary -->  
+                </fieldset>  
+
+                <br>
+
+                <fieldset>
+                    <legend>Other skills</legend>
+                    <textarea id="other-skills" name="other_skills" rows="4" placeholder="Please list any other skills you may have..."></textarea>  
+                </fieldset>
+            
+                <br>
+
+                <button type="submit">Submit Application</button> 
+                <button type="reset">Re-do Application</button> 
+            </form>  
+        </section>  
+    </main>  
+
+    <footer>  
+        <p>&copy; 2025 Your Group Name | <a href="http://jira.yourprojectlink.com">Project Management</a></p>  
+    </footer> 
+     
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
